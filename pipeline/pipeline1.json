@@ -1,0 +1,38 @@
+{
+	"name": "pipeline1",
+	"properties": {
+		"activities": [
+			{
+				"name": "Web1",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "GET",
+					"url": "https://v6.exchangerate-api.com/v6/042f2362f8842ff5a479726e/latest/USD"
+				}
+			},
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "[\"INR\",\"AED\",\"USD\"]",
+						"type": "Expression"
+					},
+					"batchCount": 2
+				}
+			}
+		],
+		"annotations": []
+	}
+}
