@@ -52,8 +52,9 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
+								"method": "GET",
 								"url": {
-									"value": "@concat('https://v6.exchangerate-api.com/v6/042f2362f8842ff5a479726e/latest','item()')",
+									"value": "@concat('https://v6.exchangerate-api.com/v6/042f2362f8842ff5a479726e/latest/',item())",
 									"type": "Expression"
 								}
 							}
