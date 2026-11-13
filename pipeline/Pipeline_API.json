@@ -37,7 +37,28 @@
 						"value": "@createArray('AED','SGD')",
 						"type": "Expression"
 					},
-					"batchCount": 2
+					"batchCount": 2,
+					"activities": [
+						{
+							"name": "Web2",
+							"type": "WebActivity",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"url": {
+									"value": "@concat('https://v6.exchangerate-api.com/v6/042f2362f8842ff5a479726e/latest','item()')",
+									"type": "Expression"
+								}
+							}
+						}
+					]
 				}
 			}
 		],
