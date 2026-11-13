@@ -28,10 +28,15 @@
 			},
 			{
 				"name": "ForEach1",
+				"description": "two ccy AED . SGD",
 				"type": "ForEach",
 				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@createArray('AED','SGD')",
+						"type": "Expression"
+					},
 					"batchCount": 2
 				}
 			}
