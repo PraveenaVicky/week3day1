@@ -1,5 +1,5 @@
 {
-	"name": "pipeline1",
+	"name": "Pipeline_API",
 	"properties": {
 		"activities": [
 			{
@@ -32,10 +32,6 @@
 				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
-					"items": {
-						"value": "[\"INR\",\"AED\",\"USD\"]",
-						"type": "Expression"
-					},
 					"batchCount": 2
 				}
 			}
